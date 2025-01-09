@@ -229,10 +229,16 @@ body {
 .userconvo {
   text-align: center;
   color: rgba(255, 255, 255, 0.338);
-  margin-top: -300px;
+  margin-top: -15px; /* Reduced the top margin to bring it closer */
   font-size: xx-large;
   opacity: 0; /* Initially hidden */
   transition: opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Adjust height to the content */
+  margin-left: 50%; /* Move to the right */
+  transform: translateX(-50%); /* Adjust to center */
 }
 
 .aiconvo {
@@ -241,18 +247,19 @@ body {
   font-size: xx-large;
   opacity: 0; /* Initially hidden */
   transition: opacity 0.5s ease-in-out;
+  margin-top: -10px; /* Reduced the gap between user and AI */
 }
 
 .convo {
-  margin-bottom: 200px;
   text-align: center;
   width: 600px;
   overflow-y: auto; /* Enable scrolling */
-  height: 100PX; /* Set a max height for scrolling */
+  max-height: 80vh; /* Adjust to fit within the viewport */
   padding-right: 10px;
-  
-
+  margin-left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to center */
 }
+
 
 .mic-box,
 .mic,
@@ -268,4 +275,33 @@ body {
 .cros,
 .time-box {
   transition: all 0.3s ease-in-out;
+}
+
+
+.userconvo h4 {
+  color:#D714D1;
+}
+
+.userconvo span{
+  color:rgba(255, 255, 255, 0.338) ;
+}
+
+
+
+.aiconvo h4 {
+  color:#D714D1;
+}
+
+.aiconvo span{
+  color:white ;
+}
+
+/* Default color for the mic div */
+.mic {
+  background-color: #D714D1;  /* Default color */
+  transition: background-color 0.3s ease;
+}
+
+.mic.active {
+  background-color: #34ae12;  /* Green when listening */
 }
