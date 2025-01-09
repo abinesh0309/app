@@ -104,7 +104,7 @@ recognition.addEventListener('error', (event) => {
 // End recognition session when finished
 recognition.addEventListener('end', () => {
   console.log('Speech recognition session ended.');
-  micButton.innerHTML = '<img src="/icons/microphone.png" height="45px" style="margin-top: -px" alt="mic">';  // Reset mic button text
+  micButton.innerHTML = '<img src="icons/microphone.png" height="45px" style="margin-top: -px" alt="mic">';  // Reset mic button text
 });
 
 // Event listener for the microphone button to change color while listening
