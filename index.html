@@ -5,41 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learn IT</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script> 
 </head>
 <body>
   <div class="container">
     <aside class="sidebar">
       <div class="logo">LEARN <span>IT</span></div>
       <nav class="menu">
-        <a href="#" class="menu-item"  > <img src="icons/home-page.png" height="45px" alt="" srcset="" style="margin-top: -13px;" > HOME</a>
-        <a href="#" class="menu-item"> <img src="icons/roleplay.png" height="45px" alt="" style="margin-top: -13px;">ROLEPLAY</a>
-        <a href="#" class="menu-item"> <img src="icons/friends.png" height="45px" alt="" style="margin-top: -13px;"> FRIENDS</a>
-        <a href="#" class="menu-item"> <img src="icons/pratice.png" height="45px" alt="" style="margin-top: -13px;"> PRACTICE</a>
-        <a href="#" class="menu-item"> <img src="icons/more-than.png" height="45px" alt="" style="margin-top: -13px;">MORE</a>
+        <a href="#" class="menu-item">
+          <img src="icons/home-page.png" height="45px" alt="" style="margin-top: -13px;"> HOME
+        </a>
+        <a href="#" class="menu-item">
+          <img src="icons/roleplay.png" height="45px" style="margin-top: -13px;"> ROLEPLAY
+        </a>
+        <a href="#" class="menu-item">
+          <img src="icons/friends.png" height="45px" style="margin-top: -13px;"> FRIENDS
+        </a>
+        <a href="#" class="menu-item">
+          <img src="icons/pratice.png" height="45px" style="margin-top: -13px;"> PRACTICE
+        </a>
+        <a href="#" class="menu-item">
+          <img src="icons/more-than.png" height="45px" style="margin-top: -13px;"> MORE
+        </a>
       </nav>
     </aside>
-
     <main class="main-content">
       <header class="top-bar">
         <div class="energy">⚡10</div>
         <div class="profile">👤</div>
       </header>
-      
-     
+      <div class="convo">
+        <div class="userconvo">
+          <h4>YOU: <span class="usermsg">Hello, A.I.</span></h4>
+        </div>
+        <div class="aiconvo">
+          <h4>A.I: <span class="usermsg">Hello.</span></h4>
+        </div>
       </div>
     </main>
   </div>
-<!-- footer -->
+
   <footer>
     <div class="mic-box"></div>
-    <div class="mic"><img src="icons/microphone.png" height="60px" alt=""> </div>
+    <div class="mic">
+      <button id="voice-toggle-button" style="z-index: 1000;"><img src="/icons/microphone.png" height="45px" style="margin-top: -px"alt="mic"></button>
+    </div>
 
     <div class="tick"></div>
+    
+  
     <div class="cros"></div>
-     <div time-box>   
+    <div class="time-box">
       <div class="dot"></div>
-      <div class="time"> 00:02:30</div>
+      
     </div>
+    <div id="bars">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    
+    <div class="time">00:02:30</div>
   </footer>
 </body>
 </html>
