@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up & Log In</title>
+    <script type="module" src="register.js" defer ></script>
     <style>
         *{
             margin: 0;
@@ -113,20 +114,7 @@
             display: none;
         }
     </style>
-    <script>
-        function toggleForm(formType) {
-            const signUpForm = document.getElementById('signUpForm');
-            const logInForm = document.getElementById('logInForm');
 
-            if (formType === 'signUp') {
-                signUpForm.classList.remove('hidden');
-                logInForm.classList.add('hidden');
-            } else {
-                logInForm.classList.remove('hidden');
-                signUpForm.classList.add('hidden');
-            }
-        }
-    </script>
 </head>
 <body>
     <div class="container">
@@ -135,12 +123,12 @@
         <!-- Sign Up Form -->
         <div id="signUpForm">
             <h1>Fresh to us? Let’s Sign Up!</h1>
-            <form onsubmit="event.preventDefault(); alert('Sign Up Successful!');">
+            <form >
                 <input type="text" placeholder="Enter Your Name" required>
-                <input type="email" placeholder="example@mail.com" required>
+                <input type="email" id="email" placeholder="example@mail.com" required>
                 <input type="password" placeholder="Create Password" required>
-                <input type="password" placeholder="Confirm Password" required>
-                <button type="submit">SIGN UP</button>
+                <input type="password" id="password" placeholder="Confirm Password" required>
+                <button type="submit" id="signUp">SIGN UP</button>
             </form>
             <a class="switch-link" onclick="toggleForm('logIn')">Already have an account? Log In</a>
         </div>
@@ -148,7 +136,7 @@
         <!-- Log In Form -->
         <div id="logInForm" class="hidden">
             <h1>Nice to meet you back, Let’s Login!</h1>
-            <form onsubmit="event.preventDefault(); alert('Log In Successful!');">
+            <form >
                 <input type="email" placeholder="example@mail.com" required>
                 <input type="password" placeholder="Enter Password" required>
                 <button type="submit">LOG IN</button>
